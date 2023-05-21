@@ -1,0 +1,37 @@
+{
+    "name": "Time Converter from 24hrs to 12hrs",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Extension that converts 24hrs time to 12hrs time",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "permissions": [
+      "scripting"
+    ],
+    "host_permissions": [
+      "https://ajax.googleapis.com/*",
+      "http://localhost/*",
+      "http://127.0.0.1/*"
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://ajax.googleapis.com/*"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "clockpicker/dist/jquery-clockpicker.min.css",
+          "clockpicker/dist/jquery-clockpicker.min.js"
+        ],
+        "matches": [
+          "https://weareoutman.github.io/*"
+        ]
+      }
+    ]
+  }
+  
